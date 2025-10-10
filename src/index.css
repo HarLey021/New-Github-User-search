@@ -1,8 +1,18 @@
 @import "tailwindcss";
 
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Space Mono", sans-serif;
 }
 
 @theme {
+  --color-grey: #4b6a9b;
+  --color-blue: #0079ff;
+  --color-dark: #2b3442;
+  --color-content-dark: #1e2a47;
+  --color-content-light: #fefefe;
+  --color-background-light: #f6f8ff;
+  --color-background-dark: #141d2f;
+
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1440px;
 }
