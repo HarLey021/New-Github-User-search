@@ -25,8 +25,10 @@ const SearchBox: React.FC<searchBoxProps> = ({
       const data: User = await response.json();
       setUserInfo(data);
       setShowError(false);
+      setUserName("");
     } catch (error) {
       setShowError(true);
+      setUserName("");
       console.error((error as Error).message);
     }
   };
@@ -47,7 +49,7 @@ const SearchBox: React.FC<searchBoxProps> = ({
           name="userName"
           value={userName}
           onChange={handleChange}
-          placeholder="Search GitHub username…"
+          placeholder={!showError ? "Search GitHub username…" : ""}
         />
 
         <img
